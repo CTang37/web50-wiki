@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ namecap }} - CTang.Wiki
+{% endblock %}
+
+{% block body %}
+    <h1>{{ namecap }}</h1>
+
+    <hr>
+
+    {{ content|safe }}
+    <br>
+    <br>
+    <a href=/edit/{{namecap}}>Edit Page</a>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "encyclopedia/layout.html" %}
+
+<style>
+      
+    textarea {
+        padding: 10%;
+        border-color: black;
+        border-width: thin;
+        height: 600px;
+        width: 1000px;
+    }
+
+    h1 {
+        padding-top: 45px;
+        padding-bottom: 20px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .quoten {
+        color: gray;
+    }
+
+    div.Robert {
+        border-style: outset;
+        border-color: black;
+        border-width: thin;
+    }
+    
+</style>
+{% block title %}
+CTang.Wiki - Edit
+{% endblock %}
+</head>
+<body>
+    {% block body %}
+    
+    <h1>Editing {{ namecap }}</h1>
+    <br>
+    <hr>
+    <div class="Robert">
+    <p>Subheading: ### text</p>
+    <p><a>Link</a>: [text](/nameofpage)</p>
+    <p><b>Bold Text</b>&nbsp;: **text** or __text__</p>
+    <p><i>Italic Text</i>&nbsp;: *text* or _text_</p>
+    <p><i><b>Bold & Italic Text</b></i>&nbsp;: ***text*** or ___text___</p>
+    <p><sup>Superscripted Text</sup>&nbsp;: &lt;sup>text&lt;/sup></p>
+    <p><sub>Subscripted Text</sub>&nbsp;: &lt;sub>text&lt;/sub></p>
+    </div>
+    <form method="post" action=/edit/{{namecap}}>
+    <h6>{{post.name.as_hidden}}</h6>
+        {% csrf_token %}
+        {{editor.textarea}}
+    <p><button type="submit">Apply Changes</button></p>
+    </form>
+    <!-- <p class="quoten"><blockquote>> Quoted Text</blockquote></p><p>&nbsp;: > text</p>
+    <div class="flex-box">
+    <form method="post" action="{% url 'add' %}">
+    </form>
+    </div> -->
+<br>
+<br>
+    {% endblock %}
+</body>

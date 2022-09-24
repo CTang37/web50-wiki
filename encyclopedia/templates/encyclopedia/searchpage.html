@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ query }} | CTang.Wiki
+{% endblock %}
+
+{% block body %}
+    <h1>Search Results</h1>
+    {% if none == True %}
+    <p>No results.</p>
+    {% endif %}
+    {% if none == False %}
+    {% for result in results %}
+    <li><a href =/{{result}}>{{ result }}</a></li>
+    {% endfor %}
+    {% endif %}
+{% endblock %}

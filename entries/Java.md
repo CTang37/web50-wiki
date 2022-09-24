@@ -1,0 +1,1 @@
+Java is a class-centered and object-oriented programming language similar to [C](/C), but more oriented towards high-level functioning.

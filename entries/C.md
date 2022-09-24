@@ -1,0 +1,1 @@
+C is a procedural programming language that is most commonly used in operating systems, networking suites, and device drivers, and was used in the past for computer applications. Many other languages, such as C# and C++, have been derived from it.

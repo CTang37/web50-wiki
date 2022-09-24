@@ -1,0 +1,1 @@
+Django is a web framework written using [Python](/Python) that allows for the design of web applications that generate [HTML](/wiki/HTML) dynamically. It is most often employed in the creation and maintenance of large database websites.
